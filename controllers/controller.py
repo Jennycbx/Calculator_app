@@ -1,13 +1,19 @@
-from flask import render_template
 from app import app
-from modules.calulator import *
+from modules import calculator
 
 
 @app.route('/add/<number1>/<number2>')
 def add(number1, number2):
-    return render_template('index.html', title='Add', add_numbers=add)
+    return f"The answer is {calculator.add(int(number1, number2))}"
 
-@app.route('/orders/<index>')
-def order(index):
-    customer_order = orders[int(index)]
-    return render_template('order.html', title='Your', order=customer_order)
+@app.route('/subtract/<number1>/<number2>')
+def subtract(number1, number2):
+    return f"The answer is {calculator.subtract(int(number1, number2))}"
+
+@app.route('/multiply/<number1>/<number2>')
+def multiply(number1, number2):
+    return f"The answer is {calculator.multiply(int(number1, number2))}"
+
+@app.route('/divide/<number1>/<number2>')
+def divide(number1, number2):
+    return f"The answer is {calculator.divide(int(number1, number2))}"
