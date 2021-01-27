@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>{{ title }} - Add</title>
+    </head>
+    <body>
+        <h1>Add</h1>
+        {% for add in calculator %}
+            <div>
+                <p>
+                    The answer is {{ add(number1, number2) }}.
+                </p>
+            </div>
+        {% endfor %}
+    </body>
+    <head>
+        <title>{{ title }} - Subtract</title>
+    </head>
+    <body>
+        <h1>Subtract</h1>
+        {% for subtract in calculator %}
+            <div>
+                <p>
+                    The answer is {{ subtract(number1, number2) }}.
+                </p>
+            </div>
+        {% endfor %}
+    </body>
+    <head>
+        <title>{{ title }} - Multiply</title>
+    </head>
+    <body>
+        <h1>Multiply</h1>
+        {% for multiply in calculator %}
+            <div>
+                <p>
+                    The answer is {{ multiply(number1, number2) }}.
+                </p>
+            </div>
+        {% endfor %}
+    </body>
+    <head>
+        <title>{{ title }} - Divide</title>
+    </head>
+    <body>
+        <h1>Divide</h1>
+        {% for divide in calculator %}
+            <div>
+                <p>
+                    The answer is {{ divide(number1, number2) }}.
+                </p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
